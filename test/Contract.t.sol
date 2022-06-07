@@ -3,10 +3,23 @@ pragma solidity ^0.8.13;
 
 import "forge-std/Test.sol";
 
-contract ContractTest is Test {
-    function setUp() public {}
+import "../src/erc721a.sol";
+import "../src/erc1155.sol";
 
-    function testExample() public {
-        assertTrue(true);
+contract erc721aTest is erc721a {
+    function setUp() public {
+    }
+
+    function testERC721a() public {
+        mint(100);
+    }
+}
+
+contract erc1155Test is erc1155 {
+    function setUp() public {
+    }
+
+    function testERC1155() public {
+        mint(100);
     }
 }
